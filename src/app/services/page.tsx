@@ -110,12 +110,12 @@ export default function ServicesPage() {
       <Header />
 
       {/* Page Header */}
-      <section className="bg-[hsl(var(--pd-dark-charcoal))] py-16 text-white">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-extrabold uppercase tracking-wider text-center mb-4">
+      <section className="bg-[hsl(var(--pd-dark-charcoal))] section-spacing text-white">
+        <div className="container mx-auto">
+          <h1 className="text-4xl md:text-5xl font-extrabold uppercase tracking-wider text-center mb-6">
             Our Services
           </h1>
-          <p className="text-center text-lg max-w-2xl mx-auto">
+          <p className="text-center text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             Professional demolition, clearing, and excavation services tailored to your project needs
           </p>
         </div>
@@ -123,16 +123,16 @@ export default function ServicesPage() {
 
       {/* Service Tabs */}
       <section className="bg-white border-b border-[hsl(var(--pd-border-gray))]">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap gap-2 py-4">
+        <div className="container mx-auto">
+          <div className="flex flex-wrap gap-3 py-6">
             {(Object.keys(serviceDetails) as ServiceTab[]).map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-6 py-3 text-sm uppercase tracking-wider font-semibold transition-colors ${
+                className={`px-8 py-4 text-sm uppercase tracking-wider font-semibold rounded-lg transition-all duration-200 ${
                   activeTab === tab
-                    ? 'bg-[hsl(var(--pd-safety-orange))] text-white'
-                    : 'bg-[hsl(var(--background))] text-[hsl(var(--pd-dark-charcoal))] hover:bg-[hsl(var(--pd-border-gray))]'
+                    ? 'bg-[hsl(var(--pd-safety-orange))] text-white shadow-md'
+                    : 'bg-[hsl(var(--background))] text-[hsl(var(--pd-dark-charcoal))] hover:bg-[hsl(var(--pd-border-gray))] border border-[hsl(var(--pd-border-gray))]'
                 }`}
               >
                 {serviceDetails[tab].title}
@@ -143,29 +143,33 @@ export default function ServicesPage() {
       </section>
 
       {/* Service Detail Content */}
-      <section className="py-16 bg-[hsl(var(--background))]">
-        <div className="container mx-auto px-4">
+      <section className="section-spacing bg-[hsl(var(--background))]">
+        <div className="container mx-auto">
           {/* Service Header */}
-          <div className="flex items-center gap-4 mb-8">
-            <Icon className="w-12 h-12 text-[hsl(var(--pd-safety-orange))]" strokeWidth={1.5} />
+          <div className="flex items-center gap-6 mb-12">
+            <div className="flex-shrink-0 w-16 h-16 bg-[hsl(var(--pd-safety-orange))]/10 rounded-xl flex items-center justify-center">
+              <Icon className="w-10 h-10 text-[hsl(var(--pd-safety-orange))]" strokeWidth={1.5} />
+            </div>
             <div>
-              <h2 className="text-3xl font-bold">{currentService.title}</h2>
-              <p className="text-[hsl(var(--pd-medium-gray))] mt-2">{currentService.description}</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-2">{currentService.title}</h2>
+              <p className="text-[hsl(var(--pd-medium-gray))] text-lg leading-relaxed">{currentService.description}</p>
             </div>
           </div>
 
           {/* Service Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
             {/* Process */}
-            <div className="bg-white border border-[hsl(var(--pd-border-gray))] p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <CheckCircle className="w-6 h-6 text-[hsl(var(--pd-safety-orange))]" />
-                <h3 className="text-xl font-bold uppercase tracking-wider">Our Process</h3>
+            <div className="bg-white border-2 border-[hsl(var(--pd-border-gray))] rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 bg-[hsl(var(--pd-safety-orange))]/10 rounded-lg flex items-center justify-center">
+                  <CheckCircle className="w-7 h-7 text-[hsl(var(--pd-safety-orange))]" />
+                </div>
+                <h3 className="text-2xl font-bold uppercase tracking-wider">Our Process</h3>
               </div>
-              <ol className="space-y-3">
+              <ol className="space-y-4">
                 {currentService.process.map((step, index) => (
-                  <li key={index} className="flex gap-3 text-[hsl(var(--pd-medium-gray))]">
-                    <span className="font-bold text-[hsl(var(--pd-safety-orange))] flex-shrink-0">
+                  <li key={index} className="flex gap-4 text-[hsl(var(--pd-medium-gray))] text-base leading-relaxed">
+                    <span className="font-bold text-lg text-[hsl(var(--pd-safety-orange))] flex-shrink-0 w-6">
                       {index + 1}.
                     </span>
                     <span>{step}</span>
@@ -175,15 +179,17 @@ export default function ServicesPage() {
             </div>
 
             {/* What's Included */}
-            <div className="bg-white border border-[hsl(var(--pd-border-gray))] p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <Shield className="w-6 h-6 text-[hsl(var(--pd-safety-orange))]" />
-                <h3 className="text-xl font-bold uppercase tracking-wider">What's Included</h3>
+            <div className="bg-white border-2 border-[hsl(var(--pd-border-gray))] rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 bg-[hsl(var(--pd-safety-orange))]/10 rounded-lg flex items-center justify-center">
+                  <Shield className="w-7 h-7 text-[hsl(var(--pd-safety-orange))]" />
+                </div>
+                <h3 className="text-2xl font-bold uppercase tracking-wider">What's Included</h3>
               </div>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 {currentService.includes.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-[hsl(var(--pd-medium-gray))]">
-                    <CheckCircle className="w-5 h-5 text-[hsl(var(--pd-safety-orange))] flex-shrink-0 mt-0.5" />
+                  <li key={index} className="flex items-start gap-4 text-[hsl(var(--pd-medium-gray))] text-base leading-relaxed">
+                    <CheckCircle className="w-5 h-5 text-[hsl(var(--pd-safety-orange))] flex-shrink-0 mt-1" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -192,22 +198,24 @@ export default function ServicesPage() {
           </div>
 
           {/* Timeline */}
-          <div className="bg-white border border-[hsl(var(--pd-border-gray))] p-8 mb-12">
-            <div className="flex items-center gap-3 mb-4">
-              <Clock className="w-6 h-6 text-[hsl(var(--pd-safety-orange))]" />
-              <h3 className="text-xl font-bold uppercase tracking-wider">Typical Timeline</h3>
+          <div className="bg-white border-2 border-[hsl(var(--pd-border-gray))] rounded-xl p-8 mb-16 shadow-sm">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-[hsl(var(--pd-safety-orange))]/10 rounded-lg flex items-center justify-center">
+                <Clock className="w-7 h-7 text-[hsl(var(--pd-safety-orange))]" />
+              </div>
+              <h3 className="text-2xl font-bold uppercase tracking-wider">Typical Timeline</h3>
             </div>
-            <p className="text-[hsl(var(--pd-medium-gray))] text-lg">{currentService.timeline}</p>
+            <p className="text-[hsl(var(--pd-medium-gray))] text-lg leading-relaxed ml-16">{currentService.timeline}</p>
           </div>
 
           {/* CTA */}
-          <div className="text-center">
-            <p className="text-[hsl(var(--pd-medium-gray))] mb-6 text-lg">
+          <div className="text-center bg-[hsl(var(--pd-light-gray-bg))] rounded-2xl py-12 px-8">
+            <p className="text-[hsl(var(--pd-medium-gray))] mb-8 text-xl font-medium">
               Ready to discuss your {currentService.title.toLowerCase()} project?
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-[hsl(var(--pd-safety-orange))] text-white px-8 py-4 text-sm uppercase tracking-wider font-semibold hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 bg-[hsl(var(--pd-safety-orange))] text-white px-10 py-5 text-base uppercase tracking-wider font-semibold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
             >
               Get Free Quote
             </Link>
@@ -216,34 +224,39 @@ export default function ServicesPage() {
       </section>
 
       {/* Safety Protocols */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl text-center mb-12">Safety Protocols</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[hsl(var(--pd-safety-orange))] text-white">
-                <Shield className="w-10 h-10" />
+      <section className="section-spacing bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Safety Protocols</h2>
+            <p className="text-lg text-[hsl(var(--pd-medium-gray))] max-w-2xl mx-auto">
+              Your safety and peace of mind are our top priorities on every project
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            <div className="text-center group">
+              <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-[hsl(var(--pd-safety-orange))] text-white rounded-xl shadow-lg group-hover:shadow-xl transition-shadow">
+                <Shield className="w-11 h-11" />
               </div>
-              <h3 className="text-lg font-bold uppercase tracking-wider mb-2">Certified Operators</h3>
-              <p className="text-[hsl(var(--pd-medium-gray))] text-sm">
+              <h3 className="text-xl font-bold uppercase tracking-wider mb-4">Certified Operators</h3>
+              <p className="text-[hsl(var(--pd-medium-gray))] text-base leading-relaxed">
                 All crew members are fully certified and trained in safe demolition practices
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[hsl(var(--pd-safety-orange))] text-white">
-                <CheckCircle className="w-10 h-10" />
+            <div className="text-center group">
+              <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-[hsl(var(--pd-safety-orange))] text-white rounded-xl shadow-lg group-hover:shadow-xl transition-shadow">
+                <CheckCircle className="w-11 h-11" />
               </div>
-              <h3 className="text-lg font-bold uppercase tracking-wider mb-2">Comprehensive Insurance</h3>
-              <p className="text-[hsl(var(--pd-medium-gray))] text-sm">
+              <h3 className="text-xl font-bold uppercase tracking-wider mb-4">Comprehensive Insurance</h3>
+              <p className="text-[hsl(var(--pd-medium-gray))] text-base leading-relaxed">
                 Full liability and workers compensation coverage on every project
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[hsl(var(--pd-safety-orange))] text-white">
-                <Home className="w-10 h-10" />
+            <div className="text-center group">
+              <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-[hsl(var(--pd-safety-orange))] text-white rounded-xl shadow-lg group-hover:shadow-xl transition-shadow">
+                <Home className="w-11 h-11" />
               </div>
-              <h3 className="text-lg font-bold uppercase tracking-wider mb-2">Environmental Compliance</h3>
-              <p className="text-[hsl(var(--pd-medium-gray))] text-sm">
+              <h3 className="text-xl font-bold uppercase tracking-wider mb-4">Environmental Compliance</h3>
+              <p className="text-[hsl(var(--pd-medium-gray))] text-base leading-relaxed">
                 Dust control, proper disposal, and full regulatory compliance
               </p>
             </div>

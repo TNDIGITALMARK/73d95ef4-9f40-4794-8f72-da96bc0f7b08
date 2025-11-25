@@ -102,8 +102,8 @@ export default function HomePage() {
       </section>
 
       {/* Our Expertise Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="section-spacing bg-white">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Expertise</h2>
             <p className="text-lg text-[hsl(var(--pd-medium-gray))] max-w-2xl mx-auto">
@@ -125,8 +125,8 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-[hsl(var(--pd-light-gray-bg))]">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="section-spacing bg-[hsl(var(--pd-light-gray-bg))]">
+        <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
               <div className="relative h-[450px] lg:h-[550px] rounded-2xl overflow-hidden shadow-xl">
@@ -213,8 +213,8 @@ export default function HomePage() {
       </section>
 
       {/* Service Areas Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="section-spacing bg-white">
+        <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Serving Ontario</h2>
             <p className="text-lg text-[hsl(var(--pd-medium-gray))] max-w-2xl mx-auto">
@@ -237,7 +237,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 bg-gradient-to-br from-[hsl(var(--pd-dark-charcoal))] to-[hsl(var(--pd-charcoal-light))] text-white overflow-hidden">
+      <section className="relative section-spacing-lg bg-gradient-to-br from-[hsl(var(--pd-dark-charcoal))] to-[hsl(var(--pd-charcoal-light))] text-white overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
@@ -248,7 +248,7 @@ export default function HomePage() {
         {/* Accent Gradient */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[hsl(var(--pd-safety-orange))] to-transparent" />
 
-        <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+        <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-8 border border-white/20">
               <span className="text-sm font-medium tracking-wide">Get Started Today</span>

@@ -420,32 +420,114 @@ UTILITY CLASSES
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
 @media (min-width: 1536px) {
   .container {
     max-width: 1400px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Section spacing utilities for consistent vertical rhythm */
+.section-spacing {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section-spacing {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-spacing {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-spacing {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+/* Tight section spacing for less prominent sections */
+.section-spacing-sm {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-spacing-sm {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-spacing-sm {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* Extra large section spacing for hero sections */
+.section-spacing-lg {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .section-spacing-lg {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-spacing-lg {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-spacing-lg {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
 }
 

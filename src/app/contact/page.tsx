@@ -67,32 +67,34 @@ export default function ContactPage() {
       <Header />
 
       {/* Page Header */}
-      <section className="bg-[hsl(var(--pd-dark-charcoal))] py-16 text-white">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-extrabold uppercase tracking-wider text-center mb-4">
+      <section className="bg-[hsl(var(--pd-dark-charcoal))] section-spacing text-white">
+        <div className="container mx-auto">
+          <h1 className="text-4xl md:text-5xl font-extrabold uppercase tracking-wider text-center mb-6">
             Contact Us
           </h1>
-          <p className="text-center text-lg max-w-2xl mx-auto">
+          <p className="text-center text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             Get your free quote today - we're ready to discuss your demolition project
           </p>
         </div>
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-16 bg-[hsl(var(--background))]">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="section-spacing bg-[hsl(var(--background))]">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold mb-8">Get In Touch</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-10">Get In Touch</h2>
 
               {/* Primary Contact - Phone */}
-              <div className="bg-[hsl(var(--pd-safety-orange))] text-white p-8 mb-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <Phone className="w-10 h-10" />
+              <div className="bg-[hsl(var(--pd-safety-orange))] text-white p-10 mb-8 rounded-xl shadow-lg">
+                <div className="flex items-center gap-5 mb-6">
+                  <div className="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center">
+                    <Phone className="w-8 h-8" />
+                  </div>
                   <div>
-                    <h3 className="text-xl font-bold uppercase tracking-wider">Call Us Now</h3>
-                    <p className="text-sm">Available Monday - Saturday, 7am - 6pm</p>
+                    <h3 className="text-xl font-bold uppercase tracking-wider mb-1">Call Us Now</h3>
+                    <p className="text-sm opacity-90">Available Monday - Saturday, 7am - 6pm</p>
                   </div>
                 </div>
                 <a
@@ -104,36 +106,40 @@ export default function ContactPage() {
               </div>
 
               {/* Email Contact */}
-              <div className="bg-white border border-[hsl(var(--pd-border-gray))] p-8 mb-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <Mail className="w-8 h-8 text-[hsl(var(--pd-safety-orange))]" />
+              <div className="bg-white border-2 border-[hsl(var(--pd-border-gray))] rounded-xl p-8 mb-8 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-[hsl(var(--pd-safety-orange))]/10 rounded-lg flex items-center justify-center">
+                    <Mail className="w-7 h-7 text-[hsl(var(--pd-safety-orange))]" />
+                  </div>
                   <div>
-                    <h3 className="text-lg font-bold uppercase tracking-wider">Email Us</h3>
+                    <h3 className="text-lg font-bold uppercase tracking-wider mb-1">Email Us</h3>
                     <p className="text-sm text-[hsl(var(--pd-medium-gray))]">We respond within 24 hours</p>
                   </div>
                 </div>
                 <a
                   href="mailto:premiumdemolitioncontact@gmail.com"
-                  className="text-lg text-[hsl(var(--pd-dark-charcoal))] hover:text-[hsl(var(--pd-safety-orange))] transition-colors break-all"
+                  className="text-base text-[hsl(var(--pd-dark-charcoal))] hover:text-[hsl(var(--pd-safety-orange))] transition-colors break-all leading-relaxed"
                 >
                   premiumdemolitioncontact@gmail.com
                 </a>
               </div>
 
               {/* Service Areas */}
-              <div className="bg-white border border-[hsl(var(--pd-border-gray))] p-8">
-                <div className="flex items-center gap-4 mb-4">
-                  <MapPin className="w-8 h-8 text-[hsl(var(--pd-safety-orange))]" />
+              <div className="bg-white border-2 border-[hsl(var(--pd-border-gray))] rounded-xl p-8 shadow-sm">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-[hsl(var(--pd-safety-orange))]/10 rounded-lg flex items-center justify-center">
+                    <MapPin className="w-7 h-7 text-[hsl(var(--pd-safety-orange))]" />
+                  </div>
                   <div>
-                    <h3 className="text-lg font-bold uppercase tracking-wider">Service Areas</h3>
+                    <h3 className="text-lg font-bold uppercase tracking-wider mb-1">Service Areas</h3>
                     <p className="text-sm text-[hsl(var(--pd-medium-gray))]">Proudly serving across Ontario</p>
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-3">
                   {serviceAreas.map((area) => (
-                    <div key={area} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-[hsl(var(--pd-safety-orange))]" />
-                      <span className="text-sm text-[hsl(var(--pd-medium-gray))]">{area}</span>
+                    <div key={area} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-[hsl(var(--pd-safety-orange))]" />
+                      <span className="text-sm text-[hsl(var(--pd-medium-gray))] font-medium">{area}</span>
                     </div>
                   ))}
                 </div>
@@ -142,19 +148,19 @@ export default function ContactPage() {
 
             {/* Quote Request Form */}
             <div>
-              <div className="bg-white border border-[hsl(var(--pd-border-gray))] p-8">
-                <h2 className="text-2xl font-bold mb-6 uppercase tracking-wider">Request a Quote</h2>
+              <div className="bg-white border-2 border-[hsl(var(--pd-border-gray))] rounded-xl p-10 shadow-sm">
+                <h2 className="text-2xl md:text-3xl font-bold mb-8 uppercase tracking-wider">Request a Quote</h2>
 
                 {isSubmitted ? (
-                  <div className="bg-green-50 border border-green-200 p-6 text-center">
-                    <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
-                    <h3 className="text-xl font-bold text-green-800 mb-2">Thank You!</h3>
-                    <p className="text-green-700">
+                  <div className="bg-green-50 border-2 border-green-200 rounded-xl p-10 text-center">
+                    <CheckCircle className="w-20 h-20 text-green-600 mx-auto mb-6" />
+                    <h3 className="text-2xl font-bold text-green-800 mb-3">Thank You!</h3>
+                    <p className="text-green-700 text-lg leading-relaxed">
                       Your quote request has been received. We'll contact you within 24 hours.
                     </p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-7">
                     {/* Name */}
                     <div>
                       <label htmlFor="name" className="block text-sm font-semibold uppercase tracking-wider mb-2">
@@ -167,7 +173,7 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-[hsl(var(--pd-border-gray))] focus:outline-none focus:ring-2 focus:ring-[hsl(var(--pd-safety-orange))] transition-all"
+                        className="w-full px-5 py-4 border-2 border-[hsl(var(--pd-border-gray))] rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(var(--pd-safety-orange))] focus:border-[hsl(var(--pd-safety-orange))] transition-all text-base"
                         placeholder="Your full name"
                       />
                     </div>
@@ -184,7 +190,7 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-[hsl(var(--pd-border-gray))] focus:outline-none focus:ring-2 focus:ring-[hsl(var(--pd-safety-orange))] transition-all"
+                        className="w-full px-5 py-4 border-2 border-[hsl(var(--pd-border-gray))] rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(var(--pd-safety-orange))] focus:border-[hsl(var(--pd-safety-orange))] transition-all text-base"
                         placeholder="your.email@example.com"
                       />
                     </div>
@@ -201,7 +207,7 @@ export default function ContactPage() {
                         required
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-[hsl(var(--pd-border-gray))] focus:outline-none focus:ring-2 focus:ring-[hsl(var(--pd-safety-orange))] transition-all"
+                        className="w-full px-5 py-4 border-2 border-[hsl(var(--pd-border-gray))] rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(var(--pd-safety-orange))] focus:border-[hsl(var(--pd-safety-orange))] transition-all text-base"
                         placeholder="(555) 123-4567"
                       />
                     </div>
@@ -217,7 +223,7 @@ export default function ContactPage() {
                         required
                         value={formData.projectType}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-[hsl(var(--pd-border-gray))] focus:outline-none focus:ring-2 focus:ring-[hsl(var(--pd-safety-orange))] transition-all bg-white"
+                        className="w-full px-5 py-4 border-2 border-[hsl(var(--pd-border-gray))] rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(var(--pd-safety-orange))] focus:border-[hsl(var(--pd-safety-orange))] transition-all bg-white text-base"
                       >
                         <option value="">Select project type</option>
                         <option value="residential-full">Full House Demolition</option>
@@ -242,7 +248,7 @@ export default function ContactPage() {
                         required
                         value={formData.location}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-[hsl(var(--pd-border-gray))] focus:outline-none focus:ring-2 focus:ring-[hsl(var(--pd-safety-orange))] transition-all"
+                        className="w-full px-5 py-4 border-2 border-[hsl(var(--pd-border-gray))] rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(var(--pd-safety-orange))] focus:border-[hsl(var(--pd-safety-orange))] transition-all text-base"
                         placeholder="City and address"
                       />
                     </div>
@@ -258,7 +264,7 @@ export default function ContactPage() {
                         required
                         value={formData.timeline}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-[hsl(var(--pd-border-gray))] focus:outline-none focus:ring-2 focus:ring-[hsl(var(--pd-safety-orange))] transition-all bg-white"
+                        className="w-full px-5 py-4 border-2 border-[hsl(var(--pd-border-gray))] rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(var(--pd-safety-orange))] focus:border-[hsl(var(--pd-safety-orange))] transition-all bg-white text-base"
                       >
                         <option value="">Select timeline</option>
                         <option value="asap">ASAP</option>
@@ -277,10 +283,10 @@ export default function ContactPage() {
                       <textarea
                         id="details"
                         name="details"
-                        rows={4}
+                        rows={5}
                         value={formData.details}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-[hsl(var(--pd-border-gray))] focus:outline-none focus:ring-2 focus:ring-[hsl(var(--pd-safety-orange))] transition-all resize-none"
+                        className="w-full px-5 py-4 border-2 border-[hsl(var(--pd-border-gray))] rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(var(--pd-safety-orange))] focus:border-[hsl(var(--pd-safety-orange))] transition-all resize-none text-base leading-relaxed"
                         placeholder="Tell us about your project, any special requirements, or questions you have..."
                       />
                     </div>
@@ -289,12 +295,12 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-[hsl(var(--pd-safety-orange))] text-white px-8 py-4 text-sm uppercase tracking-wider font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full bg-[hsl(var(--pd-safety-orange))] text-white px-10 py-5 text-base uppercase tracking-wider font-semibold rounded-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                     >
                       {isSubmitting ? 'Submitting...' : 'Submit Quote Request'}
                     </button>
 
-                    <p className="text-xs text-[hsl(var(--pd-medium-gray))] text-center">
+                    <p className="text-sm text-[hsl(var(--pd-medium-gray))] text-center leading-relaxed">
                       We respect your privacy and will never share your information
                     </p>
                   </form>
@@ -306,34 +312,39 @@ export default function ContactPage() {
       </section>
 
       {/* What to Expect */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl text-center mb-12">What Happens Next?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[hsl(var(--pd-safety-orange))] text-white font-bold text-2xl">
+      <section className="section-spacing bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">What Happens Next?</h2>
+            <p className="text-lg text-[hsl(var(--pd-medium-gray))] max-w-2xl mx-auto">
+              Our simple three-step process ensures you get the information you need quickly
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            <div className="text-center group">
+              <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-[hsl(var(--pd-safety-orange))] text-white font-bold text-3xl rounded-xl shadow-lg group-hover:shadow-xl transition-shadow">
                 1
               </div>
-              <h3 className="text-lg font-bold uppercase tracking-wider mb-2">We Review Your Request</h3>
-              <p className="text-[hsl(var(--pd-medium-gray))] text-sm">
+              <h3 className="text-xl font-bold uppercase tracking-wider mb-4">We Review Your Request</h3>
+              <p className="text-[hsl(var(--pd-medium-gray))] text-base leading-relaxed">
                 Our team evaluates your project details and requirements
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[hsl(var(--pd-safety-orange))] text-white font-bold text-2xl">
+            <div className="text-center group">
+              <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-[hsl(var(--pd-safety-orange))] text-white font-bold text-3xl rounded-xl shadow-lg group-hover:shadow-xl transition-shadow">
                 2
               </div>
-              <h3 className="text-lg font-bold uppercase tracking-wider mb-2">We Contact You</h3>
-              <p className="text-[hsl(var(--pd-medium-gray))] text-sm">
+              <h3 className="text-xl font-bold uppercase tracking-wider mb-4">We Contact You</h3>
+              <p className="text-[hsl(var(--pd-medium-gray))] text-base leading-relaxed">
                 We'll reach out within 24 hours to discuss your project
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-[hsl(var(--pd-safety-orange))] text-white font-bold text-2xl">
+            <div className="text-center group">
+              <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-[hsl(var(--pd-safety-orange))] text-white font-bold text-3xl rounded-xl shadow-lg group-hover:shadow-xl transition-shadow">
                 3
               </div>
-              <h3 className="text-lg font-bold uppercase tracking-wider mb-2">You Get Your Quote</h3>
-              <p className="text-[hsl(var(--pd-medium-gray))] text-sm">
+              <h3 className="text-xl font-bold uppercase tracking-wider mb-4">You Get Your Quote</h3>
+              <p className="text-[hsl(var(--pd-medium-gray))] text-base leading-relaxed">
                 Receive a detailed, transparent quote for your project
               </p>
             </div>
