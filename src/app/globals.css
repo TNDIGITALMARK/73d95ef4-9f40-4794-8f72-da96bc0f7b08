@@ -1,62 +1,70 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 /*
 ==============================================================================
-PREMIUM DEMOLITION DESIGN SYSTEM
-Pixel-perfect specifications extracted from design reference
+PREMIUM DEMOLITION DESIGN SYSTEM - ENHANCED
+Modern, professional design with strong visual hierarchy
 ==============================================================================
 */
 
 :root {
-  /* Premium Demolition Brand Colors (HSL Format) */
-  --pd-dark-charcoal: 0 0% 18%;        /* #2d2d2d - Headers, Footer */
-  --pd-safety-orange: 14 100% 60%;     /* #ff6b35 - CTA Buttons, Accents */
-  --pd-white: 0 0% 100%;               /* #ffffff - Text on dark, Cards */
-  --pd-light-gray-bg: 0 0% 91%;        /* #e8e8e8 - Page Background */
-  --pd-medium-gray: 0 0% 40%;          /* #666666 - Body Text */
-  --pd-border-gray: 0 0% 80%;          /* #cccccc - Card Borders */
+  /* Premium Demolition Brand Colors - Enhanced Palette */
+  --pd-dark-charcoal: 220 16% 16%;     /* #242833 - Deeper, richer dark */
+  --pd-charcoal-light: 220 14% 24%;    /* #363b49 - Lighter charcoal for variation */
+  --pd-safety-orange: 14 95% 58%;      /* #f85f32 - Vibrant, bold orange */
+  --pd-orange-hover: 14 95% 52%;       /* Darker orange on hover */
+  --pd-white: 0 0% 100%;               /* #ffffff - Pure white */
+  --pd-light-gray-bg: 220 16% 97%;     /* #f7f8fa - Softer background with hint of cool */
+  --pd-medium-gray: 220 10% 46%;       /* #6b7280 - Modern neutral gray */
+  --pd-border-gray: 220 13% 91%;       /* #e5e7eb - Subtle borders */
+  --pd-text-dark: 220 18% 20%;         /* #2d3142 - Rich text color */
+
+  /* Enhanced accent colors */
+  --pd-success: 142 71% 45%;           /* #22c55e - Success green */
+  --pd-warning: 38 92% 50%;            /* #f59e0b - Warning amber */
+  --pd-error: 0 84% 60%;               /* #ef4444 - Error red */
 
   /* Theme Mappings for Compatibility */
-  --background: 0 0% 91%;              /* Light gray background */
-  --foreground: 0 0% 18%;              /* Dark charcoal text */
+  --background: 220 16% 97%;           /* Soft cool background */
+  --foreground: 220 18% 20%;           /* Rich dark text */
 
-  --card: 0 0% 100%;                   /* White cards */
-  --card-foreground: 0 0% 18%;         /* Dark text on cards */
+  --card: 0 0% 100%;                   /* Pure white cards */
+  --card-foreground: 220 18% 20%;      /* Dark text on cards */
 
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 18%;
+  --popover-foreground: 220 18% 20%;
 
-  --primary: 14 100% 60%;              /* Safety orange */
+  --primary: 14 95% 58%;               /* Vibrant orange */
   --primary-foreground: 0 0% 100%;     /* White text on orange */
 
-  --secondary: 0 0% 18%;               /* Dark charcoal */
+  --secondary: 220 16% 16%;            /* Dark charcoal */
   --secondary-foreground: 0 0% 100%;   /* White text on dark */
 
-  --muted: 0 0% 91%;
-  --muted-foreground: 0 0% 40%;
+  --muted: 220 13% 95%;                /* Softer muted background */
+  --muted-foreground: 220 10% 46%;     /* Muted text */
 
-  --accent: 14 100% 60%;               /* Safety orange accent */
+  --accent: 14 95% 58%;                /* Safety orange accent */
   --accent-foreground: 0 0% 100%;
 
-  --destructive: 0 70% 50%;
+  --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
-  --border: 0 0% 80%;
-  --input: 0 0% 80%;
-  --ring: 14 100% 60%;
+  --border: 220 13% 91%;               /* Subtle modern borders */
+  --input: 220 13% 91%;
+  --ring: 14 95% 58%;
 
-  /* Sharp corners - NO rounding */
-  --radius: 0px;
+  /* Subtle rounding for modern feel */
+  --radius: 0.375rem;                  /* 6px - subtle corners */
 
-  --sidebar-background: 0 0% 18%;
+  --sidebar-background: 220 16% 16%;
   --sidebar-foreground: 0 0% 100%;
-  --sidebar-primary: 14 100% 60%;
+  --sidebar-primary: 14 95% 58%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 25%;
+  --sidebar-accent: 220 14% 24%;
   --sidebar-accent-foreground: 0 0% 100%;
-  --sidebar-border: 0 0% 30%;
-  --sidebar-ring: 14 100% 60%;
+  --sidebar-border: 220 13% 30%;
+  --sidebar-ring: 14 95% 58%;
 }
 
 .dark {
@@ -173,101 +181,124 @@ Pixel-perfect specifications extracted from design reference
 
 /*
 ==============================================================================
-TYPOGRAPHY SYSTEM - Montserrat Font Family
+TYPOGRAPHY SYSTEM - Modern Professional Fonts
 ==============================================================================
 */
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background-color: hsl(var(--background));
   color: hsl(var(--pd-medium-gray));
   font-weight: 400;
-  line-height: 1.6;
-  font-feature-settings: "rlig" 1, "calt" 1;
+  line-height: 1.65;
+  font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-/* Industrial Professional Typography - Bold Uppercase Headings */
+/* Modern Professional Typography with Strong Hierarchy */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-space-grotesk), 'Space Grotesk', var(--font-inter), 'Inter', sans-serif;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: hsl(var(--foreground));
+  color: hsl(var(--pd-text-dark));
   line-height: 1.2;
   margin: 0;
+  letter-spacing: -0.025em;
 }
 
 h1 {
-  font-size: 3rem;        /* 48px */
-  font-weight: 800;
-  letter-spacing: 0.125em;
+  font-size: clamp(2.5rem, 5vw, 4rem);    /* Responsive 40-64px */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 h2 {
-  font-size: 2rem;        /* 32px */
+  font-size: clamp(2rem, 4vw, 3rem);      /* Responsive 32-48px */
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: -0.02em;
 }
 
 h3 {
-  font-size: 1.5rem;      /* 24px */
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-size: clamp(1.5rem, 3vw, 2rem);    /* Responsive 24-32px */
+  font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
 h4 {
-  font-size: 1rem;        /* 16px */
+  font-size: 1.25rem;                      /* 20px */
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: -0.01em;
 }
 
 h5, h6 {
-  font-size: 0.875rem;    /* 14px */
+  font-size: 1rem;                         /* 16px */
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
 }
 
 p {
   margin: 0 0 1rem 0;
   color: hsl(var(--pd-medium-gray));
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
-/* Sharp, Professional Button Styles */
+.text-lead {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: hsl(var(--pd-medium-gray));
+}
+
+/* Modern Button Styles */
 button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-inter), 'Inter', sans-serif;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-radius: 0;
+  letter-spacing: 0.025em;
+  border-radius: var(--radius);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Premium Demolition Shadow System */
-.shadow-sm {
+button:active {
+  transform: translateY(1px);
+}
+
+/* Enhanced Shadow System for Depth */
+.shadow-xs {
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
 
+.shadow-sm {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
 .shadow {
-  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 0.1);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 .shadow-md {
-  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 0.15);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 .shadow-lg {
-  box-shadow: 0 8px 24px 0 rgb(0 0 0 / 0.2);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
-/* Smooth transitions for professional feel */
+.shadow-xl {
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+/* Smooth, optimized transitions */
 * {
-  transition: all 0.3s ease;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 /* Reset default margins for consistency */
@@ -275,4 +306,47 @@ button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/*
+==============================================================================
+UTILITY CLASSES
+==============================================================================
+*/
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Gradient overlays */
+.gradient-overlay {
+  position: relative;
+}
+
+.gradient-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(36, 40, 51, 0.95) 0%, rgba(36, 40, 51, 0.7) 100%);
+  z-index: 1;
+}
+
+/* Professional hover lift effect */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.15), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Smooth focus rings */
+*:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+  border-radius: var(--radius);
 }
