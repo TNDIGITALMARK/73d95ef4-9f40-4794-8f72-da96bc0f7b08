@@ -175,8 +175,80 @@ Modern, professional design with strong visual hierarchy
   }
 }
 
+/*
+==============================================================================
+BASE RESET - Must come FIRST before any specific styling
+==============================================================================
+*/
+
+/* Universal reset for consistency */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Border color inheritance */
 * {
   border-color: hsl(var(--border));
+}
+
+/* Smooth, optimized transitions - with exclusions for form inputs */
+*:not(input):not(textarea):not(select) {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Additional common element resets */
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Restore list styling when in content areas */
+article ul,
+article ol,
+.prose ul,
+.prose ol {
+  list-style: revert;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Ensure proper text selection appearance */
+::selection {
+  background-color: hsl(var(--primary) / 0.2);
+  color: hsl(var(--foreground));
 }
 
 /*
@@ -208,8 +280,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: hsl(var(--pd-text-dark));
   line-height: 1.2;
-  margin: 0;
   letter-spacing: -0.025em;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
 }
 
 h1 {
@@ -217,34 +290,40 @@ h1 {
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.1;
+  margin-bottom: 1.25rem;
 }
 
 h2 {
   font-size: clamp(2rem, 4vw, 3rem);      /* Responsive 32-48px */
   font-weight: 700;
   letter-spacing: -0.02em;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: clamp(1.5rem, 3vw, 2rem);    /* Responsive 24-32px */
   font-weight: 600;
   letter-spacing: -0.015em;
+  margin-bottom: 0.875rem;
 }
 
 h4 {
   font-size: 1.25rem;                      /* 20px */
   font-weight: 600;
   letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
 }
 
 h5, h6 {
   font-size: 1rem;                         /* 16px */
   font-weight: 600;
   letter-spacing: 0;
+  margin-bottom: 0.5rem;
 }
 
 p {
-  margin: 0 0 1rem 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
   color: hsl(var(--pd-medium-gray));
   font-size: 1rem;
   line-height: 1.7;
@@ -256,17 +335,39 @@ p {
   color: hsl(var(--pd-medium-gray));
 }
 
-/* Modern Button Styles */
+/* Modern Button Styles - Override reset with proper defaults */
 button {
   font-family: var(--font-inter), 'Inter', sans-serif;
   font-weight: 600;
   letter-spacing: 0.025em;
   border-radius: var(--radius);
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  background: none;
+  border: none;
 }
 
 button:active {
   transform: translateY(1px);
+}
+
+/* Form elements - ensure proper styling */
+input, textarea, select {
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Links - reset defaults */
+a {
+  color: hsl(var(--primary));
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+
+a:hover {
+  color: hsl(var(--primary) / 0.8);
+  text-decoration: underline;
 }
 
 /* Enhanced Shadow System for Depth */
@@ -292,20 +393,6 @@ button:active {
 
 .shadow-xl {
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-}
-
-/* Smooth, optimized transitions */
-* {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-/* Reset default margins for consistency */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 /*
