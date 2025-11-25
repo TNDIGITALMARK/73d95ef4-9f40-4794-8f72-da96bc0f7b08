@@ -258,11 +258,16 @@ TYPOGRAPHY SYSTEM - Modern Professional Fonts
 */
 
 html {
+  margin: 0;
+  padding: 0;
   font-size: 16px;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background-color: hsl(var(--background));
   color: hsl(var(--pd-medium-gray));
@@ -272,6 +277,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Modern Professional Typography with Strong Hierarchy */
@@ -400,6 +407,47 @@ a:hover {
 UTILITY CLASSES
 ==============================================================================
 */
+
+/* Container spacing utilities */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1400px;
+  }
+}
 
 /* Glass morphism effect */
 .glass {
