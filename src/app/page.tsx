@@ -69,13 +69,13 @@ export default function HomePage() {
               <span className="text-sm font-medium tracking-wide">Ontario's Most Trusted Demolition Experts</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
               Professional Demolition
               <br />
               <span className="text-[hsl(var(--pd-safety-orange))]">Done Right</span>
             </h1>
 
-            <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-200 font-light leading-relaxed">
+            <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-white font-light leading-relaxed opacity-90">
               Safe, efficient, and reliable demolition services across Ontario. Licensed operators, comprehensive insurance, and exceptional results.
             </p>
 
