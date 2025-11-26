@@ -42,10 +42,10 @@ export function Footer() {
                 Premium <span className="text-[hsl(var(--pd-safety-orange))]">Demolition</span>
               </span>
             </div>
-            <p className="text-base text-gray-300 mb-6 leading-relaxed max-w-md">
+            <p className="text-base text-white mb-6 leading-relaxed max-w-md opacity-90">
               Ontario's premier choice for professional demolition services. We deliver safe, efficient, and reliable solutions for all your demolition needs.
             </p>
-            <div className="flex items-start gap-3 text-sm text-gray-400">
+            <div className="flex items-start gap-3 text-sm text-white">
               <MapPin className="w-5 h-5 text-[hsl(var(--pd-safety-orange))] flex-shrink-0 mt-0.5" />
               <span>Serving communities across Ontario</span>
             </div>
@@ -53,15 +53,15 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-base font-bold mb-6">Quick Links</h3>
+            <h3 className="text-base font-bold mb-6 text-white">Quick Links</h3>
             <div className="flex flex-col gap-3">
-              <Link href="/" className="text-sm text-gray-300 hover:text-[hsl(var(--pd-safety-orange))] transition-all duration-200 hover:translate-x-1 inline-block">
+              <Link href="/" className="text-sm text-white hover:text-[hsl(var(--pd-safety-orange))] transition-all duration-200 hover:translate-x-1 inline-block">
                 Home
               </Link>
-              <Link href="/services" className="text-sm text-gray-300 hover:text-[hsl(var(--pd-safety-orange))] transition-all duration-200 hover:translate-x-1 inline-block">
+              <Link href="/services" className="text-sm text-white hover:text-[hsl(var(--pd-safety-orange))] transition-all duration-200 hover:translate-x-1 inline-block">
                 Services
               </Link>
-              <Link href="/contact" className="text-sm text-gray-300 hover:text-[hsl(var(--pd-safety-orange))] transition-all duration-200 hover:translate-x-1 inline-block">
+              <Link href="/contact" className="text-sm text-white hover:text-[hsl(var(--pd-safety-orange))] transition-all duration-200 hover:translate-x-1 inline-block">
                 Contact
               </Link>
             </div>
@@ -69,11 +69,11 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-base font-bold mb-6">Contact Us</h3>
+            <h3 className="text-base font-bold mb-6 text-white">Contact Us</h3>
             <div className="flex flex-col gap-4">
               <a
                 href="tel:4379919026"
-                className="group flex items-center gap-3 text-sm text-gray-300 hover:text-[hsl(var(--pd-safety-orange))] transition-colors"
+                className="group flex items-center gap-3 text-sm text-white hover:text-[hsl(var(--pd-safety-orange))] transition-colors"
               >
                 <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-[hsl(var(--pd-safety-orange))]/10 transition-colors">
                   <Phone className="w-4 h-4" />
@@ -82,7 +82,7 @@ export function Footer() {
               </a>
               <a
                 href="mailto:premiumdemolitioncontact@gmail.com"
-                className="group flex items-start gap-3 text-sm text-gray-300 hover:text-[hsl(var(--pd-safety-orange))] transition-colors"
+                className="group flex items-start gap-3 text-sm text-white hover:text-[hsl(var(--pd-safety-orange))] transition-colors"
               >
                 <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-[hsl(var(--pd-safety-orange))]/10 transition-colors flex-shrink-0">
                   <Mail className="w-4 h-4" />
@@ -95,12 +95,12 @@ export function Footer() {
 
         {/* Service Areas */}
         <div className="py-8 border-t border-white/10">
-          <h4 className="text-sm font-semibold mb-6 text-center text-gray-400 uppercase tracking-wider">Service Areas</h4>
+          <h4 className="text-sm font-semibold mb-6 text-center text-white uppercase tracking-wider opacity-75">Service Areas</h4>
           <div className="flex flex-wrap justify-center gap-3">
             {serviceAreas.map((area) => (
               <span
                 key={area}
-                className="px-4 py-2 bg-white/5 rounded-lg text-sm text-gray-300 hover:bg-white/10 hover:text-[hsl(var(--pd-safety-orange))] transition-all duration-200 cursor-default"
+                className="px-4 py-2 bg-white/5 rounded-lg text-sm text-white hover:bg-white/10 hover:text-[hsl(var(--pd-safety-orange))] transition-all duration-200 cursor-default"
               >
                 {area}
               </span>
@@ -110,7 +110,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="pt-8 border-t border-white/10 text-center">
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-white opacity-75">
             © {new Date().getFullYear()} Premium Demolition. All rights reserved.
           </p>
         </div>

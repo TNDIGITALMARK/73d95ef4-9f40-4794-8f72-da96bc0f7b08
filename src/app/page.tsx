@@ -66,7 +66,7 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-8 border border-white/20">
               <span className="w-2 h-2 bg-[hsl(var(--pd-safety-orange))] rounded-full animate-pulse" />
-              <span className="text-sm font-medium tracking-wide">Ontario's Most Trusted Demolition Experts</span>
+              <span className="text-sm font-medium tracking-wide text-white">Ontario's Most Trusted Demolition Experts</span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
@@ -251,14 +251,14 @@ export default function HomePage() {
         <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-8 border border-white/20">
-              <span className="text-sm font-medium tracking-wide">Get Started Today</span>
+              <span className="text-sm font-medium tracking-wide text-white">Get Started Today</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Ready to Start Your Project?
             </h2>
 
-            <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-white mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">
               Contact us today for a free quote and project consultation. Our team is ready to help bring your vision to life.
             </p>
 
