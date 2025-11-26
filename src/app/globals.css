@@ -270,7 +270,7 @@ body {
   padding: 0;
   font-family: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background-color: hsl(var(--background));
-  color: hsl(var(--pd-medium-gray));
+  color: hsl(var(--foreground));
   font-weight: 400;
   line-height: 1.65;
   font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
@@ -574,61 +574,8 @@ CONTRAST & VISIBILITY UTILITIES - Ensure proper text visibility
 ==============================================================================
 */
 
-/* Ensure light text on dark backgrounds */
-[class*="bg-[hsl(var(--pd-dark-charcoal))]"] h1,
-[class*="bg-[hsl(var(--pd-dark-charcoal))]"] h2,
-[class*="bg-[hsl(var(--pd-dark-charcoal))]"] h3,
-[class*="bg-[hsl(var(--pd-dark-charcoal))]"] h4,
-[class*="bg-[hsl(var(--pd-dark-charcoal))]"] h5,
-[class*="bg-[hsl(var(--pd-dark-charcoal))]"] h6,
-[class*="bg-[hsl(var(--pd-charcoal-light))]"] h1,
-[class*="bg-[hsl(var(--pd-charcoal-light))]"] h2,
-[class*="bg-[hsl(var(--pd-charcoal-light))]"] h3,
-[class*="bg-[hsl(var(--pd-charcoal-light))]"] h4,
-[class*="bg-[hsl(var(--pd-charcoal-light))]"] h5,
-[class*="bg-[hsl(var(--pd-charcoal-light))]"] h6,
-.bg-gradient-to-br.from-\\[hsl\\(var\\(--pd-dark-charcoal\\)\\)\\] h1,
-.bg-gradient-to-br.from-\\[hsl\\(var\\(--pd-dark-charcoal\\)\\)\\] h2,
-.bg-gradient-to-br.from-\\[hsl\\(var\\(--pd-dark-charcoal\\)\\)\\] h3,
-.bg-gradient-to-br.from-\\[hsl\\(var\\(--pd-dark-charcoal\\)\\)\\] h4,
-.bg-gradient-to-br.from-\\[hsl\\(var\\(--pd-dark-charcoal\\)\\)\\] h5,
-.bg-gradient-to-br.from-\\[hsl\\(var\\(--pd-dark-charcoal\\)\\)\\] h6 {
-  color: hsl(var(--pd-white)) !important;
-}
-
-[class*="bg-[hsl(var(--pd-dark-charcoal))]"] p,
-[class*="bg-[hsl(var(--pd-charcoal-light))]"] p,
-.bg-gradient-to-br.from-\\[hsl\\(var\\(--pd-dark-charcoal\\)\\)\\] p {
-  color: rgb(229, 231, 235) !important; /* Light gray for body text on dark */
-}
-
-/* Light section text colors */
-.bg-white h1,
-.bg-white h2,
-.bg-white h3,
-.bg-white h4,
-.bg-white h5,
-.bg-white h6,
-[class*="bg-[hsl(var(--pd-light-gray-bg))]"] h1,
-[class*="bg-[hsl(var(--pd-light-gray-bg))]"] h2,
-[class*="bg-[hsl(var(--pd-light-gray-bg))]"] h3,
-[class*="bg-[hsl(var(--pd-light-gray-bg))]"] h4,
-[class*="bg-[hsl(var(--pd-light-gray-bg))]"] h5,
-[class*="bg-[hsl(var(--pd-light-gray-bg))]"] h6,
-[class*="bg-[hsl(var(--background))]"] h1,
-[class*="bg-[hsl(var(--background))]"] h2,
-[class*="bg-[hsl(var(--background))]"] h3,
-[class*="bg-[hsl(var(--background))]"] h4,
-[class*="bg-[hsl(var(--background))]"] h5,
-[class*="bg-[hsl(var(--background))]"] h6 {
-  color: hsl(var(--pd-text-dark)) !important;
-}
-
-.bg-white p,
-[class*="bg-[hsl(var(--pd-light-gray-bg))]"] p,
-[class*="bg-[hsl(var(--background))]"] p {
-  color: hsl(var(--pd-medium-gray)) !important;
-}
+/* Dark backgrounds - white text is enforced via inline styles and text-white class in components */
+/* Light backgrounds inherit the body/default foreground color */
 
 /* Utility classes for manual override */
 .text-on-dark {
